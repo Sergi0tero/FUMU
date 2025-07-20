@@ -1,0 +1,30 @@
+# Entorno virtual
+venv/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+*.swp
+
+# Archivos de entorno
+.env
+*.env
+
+# Dependencias (si estás usando pipenv o poetry)
+Pipfile.lock
+poetry.lock
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
