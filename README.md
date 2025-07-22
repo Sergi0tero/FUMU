@@ -58,39 +58,51 @@ Por cada acción (`Ticker`) procesada:
 
 ## 🖥️ Estructura del Proyecto
 
+```bash
+📦 simulador-multiagente-prediccion/
+├── 📘 README.md                 # Documentación general del proyecto
+├── 📄 requirements.txt         # Dependencias necesarias para correr el entorno
+├── 📓 main.ipynb               # Notebook principal de simulación
+├── 📄 simulacion_<TICKER>.xlsx # Resultados exportados por cada acción (generados)
+├── 📁 agentes/
+│   ├── traditional_agent.py    # Clase del agente tradicional (regresión + boosting)
+│   └── agente_ia.py            # Clase del agente IA (opcional si lo usas)
+├── 📁 core/
+│   ├── broker.py               # Sistema de pub/sub entre agentes
+│   ├── whiteboard.py           # Memoria compartida entre agentes y entorno
+│   └── data_fetcher.py         # Controlador de datos secuenciales por ticker
+├── 📁 data/
+│   └── historico_top10_indicadores_completos.xlsx  # Dataset original
+└── 📁 resultados/
+    └── graficas/               # Gráficas generadas por cada ticker (opcional)
 
-├── main.ipynb # Notebook principal
-├── simulacion_<ticker>.xlsx # Resultados por acción
-├── agenteIA.py # Agente IA (opcional)
-├── broker.py # Sistema de publicación/suscripción
-├── whiteboard.py # Canal de comunicación
-├── data_fetcher.py # Controlador de datos históricos
-├── README.md #
 
-   +------------------+
-   |   DataFetcher    |  --> ExcelLogger (cada hora)
-   +------------------+
-             |
-         [Publish]
-             ↓
- +---------------------+
- |   Pub/Sub Broker    |
- +---------------------+
-        /        \
-       /          \
-Grupo Trad    Grupo IA
- (2 agentes)   (2 agentes)
-    ↓              ↓
-Average Consensus Average Consensus
-    \              /
-     \            /
-    +-------------+
-    | Whiteboard  |
-    +-------------+
-          |
-   +--------------+
-   | DecisionMaker|
-   +--------------+
+<img width="397" height="495" alt="image" src="https://github.com/user-attachments/assets/59840891-1a72-4fd5-ae98-cb784fcdf38e" />
+
+                   +------------------+
+                   |   DataFetcher    |  --> ExcelLogger (cada hora)
+                   +------------------+
+                             |
+                         [Publish]
+                             ↓
+                 +---------------------+
+                 |   Pub/Sub Broker    |
+                 +---------------------+
+                        /        \
+                       /          \
+                Grupo Trad    Grupo IA
+                 (2 agentes)   (2 agentes)
+                    ↓              ↓
+            Average Consensus   Average Consensus
+                    \              /
+                     \            /
+                    +-------------+
+                    | Whiteboard  |
+                    +-------------+
+                          |
+                    +--------------+
+                    | DecisionMaker|
+                    +--------------+
 
 ## 📦 Requisitos
 
