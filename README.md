@@ -56,6 +56,18 @@ Por cada acción (`Ticker`) procesada:
 
 ---
 
+## 📦 Requisitos
+
+- Python 3.8+
+- Pandas
+- Scikit-learn
+- Matplotlib
+- Openpyxl
+
+Instalación rápida:
+
+- pip install -r requirements.txt
+
 ## 🖥️ Estructura del Proyecto
 
 ```bash
@@ -101,16 +113,5 @@ Por cada acción (`Ticker`) procesada:
                     +--------------+
                     | DecisionMaker|
                     +--------------+
-```bash
-## 📦 Requisitos
+```
 
-- Python 3.8+
-- Pandas
-- Scikit-learn
-- Matplotlib
-- Openpyxl
-
-Instalación rápida:
-
-```bash
-pip install -r requirements.txt
