@@ -77,8 +77,6 @@ Por cada acción (`Ticker`) procesada:
     └── graficas/               # Gráficas generadas por cada ticker (opcional)
 
 
-<img width="397" height="495" alt="image" src="https://github.com/user-attachments/assets/59840891-1a72-4fd5-ae98-cb784fcdf38e" />
-
                    +------------------+
                    |   DataFetcher    |  --> ExcelLogger (cada hora)
                    +------------------+
@@ -103,7 +101,7 @@ Por cada acción (`Ticker`) procesada:
                     +--------------+
                     | DecisionMaker|
                     +--------------+
-
+```bash
 ## 📦 Requisitos
 
 - Python 3.8+
